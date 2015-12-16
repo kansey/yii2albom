@@ -24,8 +24,7 @@ class ImageForm extends Model
 	public function rules()
 	{
 		return [
-			[['image'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg,jpeg,gif'],
-
+		  [['image'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg,jpeg,gif'],
 		];
 	} //end rules()
 
@@ -35,17 +34,17 @@ class ImageForm extends Model
  * @return boolean true 
 */
 
-	public function upload()
-	{
-		if ($this->validate()) {
+   public function upload()
+   {
+	    if ($this->validate()) {
             
-            $this->image->saveAs('images/store/' . $this->image->baseName . '.' . $this->image->extension);
+            	$this->image->saveAs('images/store/' . $this->image->baseName . '.' . $this->image->extension);
                      
-            if ($this->saveImgInDB()) {
+            	if ($this->saveImgInDB()) {
             	
-            	return true;
+            		return true;
+            	} 
             } 
-        } 
     } //end upload()
 
 
@@ -54,7 +53,7 @@ class ImageForm extends Model
  *
  * @return mixed
 */
-    public function saveImgInDB()
+   public function saveImgInDB()
     {
     	$modelImages = new Images();
     	$cookies     = Yii::$app->request->cookies;
@@ -62,7 +61,7 @@ class ImageForm extends Model
         $url         = Yii::$app->route->getRouteWeb().$this->image->baseName.'.'.$this->image->extension;
         
         $values = [
-        	'tocken'    => $tocken,
+            'tocken'    => $tocken,
             'url'       => $url,
             'base_name' => $this->image->baseName,
             'extension' => $this->image->extension,
