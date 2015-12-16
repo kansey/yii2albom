@@ -42,10 +42,15 @@ class Albom extends Model
 	public function getTockenUser()
 	{
 		$cookies = Yii::$app->request->cookies;
-        return $cookies->getValue('user');
+                return $cookies->getValue('user');
 	} //end getIdUser()
 
 
+/**
+ *  Get mode User with tocken
+ * 
+ * @return mixed
+*/
 	public static function getUser()
 	{
 		$model  = new Albom();
