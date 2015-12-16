@@ -80,7 +80,7 @@ class ImageController extends Controller
             return $this->render('_forms', ['model' => new Albom()]);
         } 
         else {
-        	$this->redirect(\Yii::$app->urlManager->createUrl("image/create"));
+            $this->redirect(\Yii::$app->urlManager->createUrl("image/create"));
         }    
     } //end actionEdit()
 
