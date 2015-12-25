@@ -1,6 +1,8 @@
-Yii 2 Basic Project Template
+APP DESCRIPTION 
 ============================
+It is a web application is a simple gallery, which registered user is able to download and view using a carousel, they all loaded images.
 
+-------------------
 Yii 2 Basic Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
 rapidly creating small projects.
 
@@ -30,6 +32,4 @@ DIRECTORY STRUCTURE
 
 
 
-APP DESCRIPTION 
--------------------
-It is a web application is a simple gallery, which registered user is able to download and view using a carousel, they all loaded images.
+
